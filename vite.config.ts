@@ -21,7 +21,7 @@ const baseConfig: UserConfigExport = {
     },
     server: {
         open: '/demos/index-samples.html',
-        https: true
+        https: false
     }
 };
 
