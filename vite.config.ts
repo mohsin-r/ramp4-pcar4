@@ -1,3 +1,4 @@
+import mkcert from 'vite-plugin-mkcert';
 import { defineConfig, type UserConfigExport } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import VitePluginI18n from './scripts/vite-plugin-i18n';
@@ -7,7 +8,7 @@ import { resolve } from 'path';
 const distName = resolve(__dirname, process.env.DIST_NAME || 'dist');
 
 const baseConfig: UserConfigExport = {
-    plugins: [vue(), VitePluginI18n(), VitePluginVersion()],
+    plugins: [vue(), VitePluginI18n(), VitePluginVersion(), mkcert()],
     base: './',
     resolve: {
         alias: {
@@ -19,7 +20,8 @@ const baseConfig: UserConfigExport = {
         target: 'esnext'
     },
     server: {
-        open: '/demos/index-samples.html'
+        open: '/demos/index-samples.html',
+        https: true
     }
 };
 

@@ -45,6 +45,7 @@
         "throttle-debounce": "~3.0.1",
         "tiny-emitter": "^2.1.0",
         "tippy.js": "next",
+        "vite-plugin-mkcert": "^1.10.1",
         "vue": "^3.2.31",
         "vue-accessible-color-picker": "^4.0.3",
         "vue-i18n": "^9.1.7",
